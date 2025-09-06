@@ -1,0 +1,143 @@
+/* TransactionHistory.css */
+.transaction-history {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 1极速4 px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.transaction-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border极速4 -color);
+  background: var(--background);
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background: var(--accent);
+}
+
+.transaction-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.transaction-item:hover {
+  background: var(--accent);
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.transaction-icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.transaction-icon.success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.transaction-icon.destructive {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--destructive);
+}
+
+.transaction-details h4 {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.transaction-details p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.transaction-amount {
+  text-align: right;
+}
+
+.transaction-amount .amount {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.transaction-amount .success {
+  color: var(--success);
+}
+
+.transaction-amount .destructive {
+  color: var(--destructive);
+}
+
+.transaction-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge.success {
+  background: var(--success);
+  color: white;
+}
+
+.status-badge.warning {
+  background: var(--warning);
+  color: white;
+}
+
+.status-badge.destructive {
+  background: var(--destructive);
+  color: white;
+}
+
+.transaction-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

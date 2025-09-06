@@ -1,0 +1,99 @@
+/* QuickActions.css */
+.quick-actions {
+  margin-bottom: 1.5rem;
+}
+
+.quick-actions h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .actions-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.action-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.action-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.action-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.action-card:hover .action-icon {
+  transform: scale(1.1);
+}
+
+.action-card.blue .action-icon {
+  background: var(--blue-50);
+  color: #2563eb;
+}
+
+.action-card.green .action-icon {
+  background: var(--green-50);
+  color: #059669;
+}
+
+.action-card.purple .action-icon {
+  background: var(--purple-50);
+  color: #7c3aed;
+}
+
+.action-card.yellow .action-icon {
+  background: var(--yellow-50);
+  color: #d97706;
+}
+
+.action-card.indigo .action-icon {
+  background: var(--indigo-50);
+  color: #4f46e5;
+}
+
+.action-card.red .action-icon {
+  background: var(--red-50);
+  color: #dc2626;
+}
+
+.action-card.gray .action-icon {
+  background: var(--gray-50);
+  color: #4b5563;
+}
+
+.action-card.emerald .action-icon {
+  background: var(--emerald-50);
+  color: #059669;
+}
+
+.action-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+}

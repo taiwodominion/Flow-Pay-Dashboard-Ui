@@ -1,12 +1,13 @@
-import Home from '../pages/Home'
-import '../css/App.css'
+import React, { useState } from 'react';
+import Home from './pages/Home';
+import './css/App.css';
 
 function App() {
   return (
-    <>
-     <Home />
-    </>
-  )
+    <div className="dashboard-container">
+      <Home />
+    </div>
+  );
 }
 
-export default App
+export default App;
