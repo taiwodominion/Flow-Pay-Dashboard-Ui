@@ -86,3 +86,13 @@
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.9);
 }
+
+@media (max-width: 468px) {
+    .wallet-card {
+        flex-direction: column;
+    }
+
+    .wallet-header {
+        text-align: center;
+    }
+}
