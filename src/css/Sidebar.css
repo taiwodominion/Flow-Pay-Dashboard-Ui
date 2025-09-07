@@ -108,3 +108,9 @@ aside {
     position: absolute;
   }
 }
+
+@media (max-width: 468px) {
+  .sidebar-toggle {
+    padding: 1.5rem 0.2rem; 
+  }
+}

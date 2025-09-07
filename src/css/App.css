@@ -107,3 +107,9 @@ body {
   flex: 1;
   padding: 1.5rem;
 }
+
+@media (max-width: 468px) {
+  .dashboard-main {
+    padding: 0.5rem;
+  }
+}

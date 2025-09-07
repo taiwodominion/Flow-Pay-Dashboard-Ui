@@ -24,7 +24,6 @@ header img {
   display:flex;
   align-items: center;
   gap: 1rem;
-  background: red;
 }
 
 .notification-bell {
@@ -107,5 +106,22 @@ header img {
 @media (max-width: 900px) {
     .user-profile {
         margin-left: 60px;
+    }
+}
+
+@media (max-width: 468px) {
+    .header img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .user-profile {
+        margin-left: 10px;
+        gap: 0.5rem;
+    }
+
+    .user-profile span {
+        font-weight: 400;
+        font-size: 13px;
     }
 }

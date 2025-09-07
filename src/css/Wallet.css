@@ -56,7 +56,8 @@
   margin-top: 1rem;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -88,11 +89,19 @@
 }
 
 @media (max-width: 468px) {
-    .wallet-card {
-        flex-direction: column;
-    }
+  .wallet-card {
+    flex-direction: column;
+    padding: 0.8rem;
+  }
 
-    .wallet-header {
-        text-align: center;
-    }
+  .wallet-header {
+    text-align: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.5rem 0.8rem;
+    font-weight: 400;
+    font-size: 0.575rem;
+  }
 }
