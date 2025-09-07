@@ -3,7 +3,7 @@
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
-  box-shadow: 0 1极速4 px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .transaction-header {
@@ -23,7 +23,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border极速4 -color);
+  border: 1px solid var(--border4-color);
   background: var(--background);
   border-radius: 0.375rem;
   font-weight: 500;

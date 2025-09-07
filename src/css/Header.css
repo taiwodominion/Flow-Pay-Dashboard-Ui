@@ -21,9 +21,10 @@ header img {
 }
 
 .header-right {
-  display:极速4 flex;
+  display:flex;
   align-items: center;
   gap: 1rem;
+  background: red;
 }
 
 .notification-bell {
@@ -101,4 +102,10 @@ header img {
 
 .user-profile span {
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .user-profile {
+        margin-left: 60px;
+    }
 }
