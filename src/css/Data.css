@@ -1,0 +1,19 @@
+.main {
+  flex: 1;
+  padding: 24px;
+  margin-left: 16rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        margin-left: 0;
+    }
+}

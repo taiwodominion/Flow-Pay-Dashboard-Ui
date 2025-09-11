@@ -30,7 +30,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header">
+    <div className='head-div'>
+      <div className="header">
       <div className="user-profile" onClick={toggleDropdown}>
         <img src={userImage} alt="User" />
         <span>Taiwo Dominion</span>
@@ -50,7 +51,8 @@ const Header = () => {
         <FontAwesomeIcon icon={faBell} />
         <span className="badge">3</span>
       </div>
-    </header>
+    </div>
+    </div>
   );
 };
 

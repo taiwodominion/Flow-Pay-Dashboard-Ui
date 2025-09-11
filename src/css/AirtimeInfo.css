@@ -1,0 +1,37 @@
+.airtime-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: rgba(67, 97, 238, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.info-card h3 i {
+    margin-right: 10px;
+}
+
+.info-card ul {
+    list-style: none;
+}
+
+.info-card li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.info-card li:last-child {
+    border-bottom: none;
+}

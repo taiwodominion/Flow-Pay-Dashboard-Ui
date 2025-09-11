@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Wallet from '../components/Wallet';
 import QuickActions from '../components/QuickActions';
 import TransactionHistory from '../components/TransactionHistory';
-// import '../css/Home.css';
+import '../css/Home.css';
 
 const Home = () => {
   return (

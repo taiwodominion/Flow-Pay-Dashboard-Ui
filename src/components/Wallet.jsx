@@ -1,4 +1,3 @@
-// src/components/Wallet.jsx
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faPlus, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -28,12 +27,12 @@ const Wallet = () => {
       </div>
       <div className="wallet-actions">
         <a href="/fund-wallet">
-          <button className="btn-primary">
+          <button>
             <FontAwesomeIcon icon={faPlus} />
             Fund Wallet
           </button>
         </a>
-        <button className="btn-secondary">
+        <button>
           <FontAwesomeIcon icon={faArrowRight} />
           Withdraw
         </button>
