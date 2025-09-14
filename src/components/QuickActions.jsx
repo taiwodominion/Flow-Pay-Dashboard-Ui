@@ -29,7 +29,7 @@ const QuickActions = () => {
           </div>
           <p className="action-label">Buy Data</p>
         </a>
-        <a href="/tv" className="action-card purple">
+        <a href="/tvSub" className="action-card purple">
           <div className="action-icon">
             <FontAwesomeIcon icon={faTv} />
           </div>

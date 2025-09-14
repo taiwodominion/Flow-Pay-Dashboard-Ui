@@ -76,6 +76,11 @@ body::-webkit-scrollbar {
   .sidebar-toggle {
     display: block;
   }
+
+  .user-profile {
+    gap: 0.5rem;
+    padding-left: 60px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -95,13 +100,13 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 468px) {
+  .dashboard-main {
+    padding: 10px;
+  }
+
   .header img {
     width: 25px;
     height: 25px;
-  }
-
-  .user-profile {
-    gap: 0.5rem;
   }
 
   .user-profile span {
@@ -114,7 +119,7 @@ body::-webkit-scrollbar {
   }
 
   .sidebar-toggle {
-    padding: 0.8rem;
+    padding: 0.4rem;
   }
 
   .dropdown-menu {
@@ -131,11 +136,15 @@ body::-webkit-scrollbar {
   }
 
   .actions-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .quick-actions h2 {
     font-size: 1.1rem;
+  }
+
+  .transaction-content {
+    padding: 10px;
   }
 
   .transaction-title {
@@ -145,5 +154,9 @@ body::-webkit-scrollbar {
   .view-all-btn {
     padding: 0.4rem 0.8rem;
     font-size: 0.75rem;
+  }
+
+  .tv-sub-main {
+    padding: 1.5rem 0.1rem;
   }
 }

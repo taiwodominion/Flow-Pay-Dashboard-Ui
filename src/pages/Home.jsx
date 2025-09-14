@@ -9,9 +9,13 @@ import TransactionHistory from '../components/TransactionHistory';
 const Home = () => {
   return (
     <div className="dashboard-layout">
-      <Sidebar />
+      <aside>
+        <Sidebar />
+      </aside>
       <div className="main-content">
-        <Header />
+        <header>
+          <Header />
+        </header>
         <main className="dashboard-main">
           <Wallet />
           <QuickActions />
@@ -19,6 +23,17 @@ const Home = () => {
         </main>
       </div>
     </div>
+    // <div className="dashboard-layout">
+    //   <Sidebar />
+    //   <div className="main-content">
+    //     <Header />
+    //     <main className="dashboard-main">
+    //       <Wallet />
+    //       <QuickActions />
+    //       <TransactionHistory />
+    //     </main>
+    //   </div>
+    // </div>
   );
 };
 
