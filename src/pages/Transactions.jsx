@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
-import ElectricityPayment from '../components/ElectricityPayment'
+import TransactionForm from '../components/TransactionForm'
 
-const Electricity = () => {
+const Transactions = () => {
   return (
     <div className="dashboard-layout">
       <aside>
@@ -14,11 +14,11 @@ const Electricity = () => {
           <Header />
         </header>
         <main className="dashboard-main">
-          <ElectricityPayment />
+          <TransactionForm />
         </main>
       </div>
     </div>
   )
 }
 
-export default Electricity
+export default Transactions

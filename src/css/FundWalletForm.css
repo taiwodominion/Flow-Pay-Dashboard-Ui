@@ -1,0 +1,229 @@
+/* pages/FundWallet.css */
+.fundWalletPage {
+  /* max-width: 60rem; */
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fundWalletHeader {
+  text-align: center;
+}
+
+.fundWalletTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.fundWalletDescription {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.fundWalletCard {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.fundWalletForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.quickAmountsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.amountButton {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+  height: 3rem;
+}
+
+.amountButton:hover {
+  background-color: var(--accent-bg);
+  border-color: var(--primary-color);
+}
+
+.amountButtonSelected {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+  border-color: var(--primary-color);
+}
+
+.amountInput {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  height: 3rem;
+}
+
+.amountInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.paymentMethodCard {
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: var(--card-bg);
+}
+
+.paymentMethodCard:hover {
+  background-color: var(--accent-bg);
+  border-color: var(--primary-color);
+}
+
+.paymentMethodCardSelected {
+  border-color: var(--primary-color);
+  background-color: var(--accent-bg);
+}
+
+.paymentMethodContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paymentMethodIcon {
+  padding: 0.5rem;
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 0.375rem;
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+}
+
+.paymentMethodInfo {
+  flex: 1;
+}
+
+.paymentMethodName {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.paymentMethodDescription {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.paymentMethodFee {
+  text-align: right;
+}
+
+.feeText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.paymentSummary {
+  background-color: var(--muted-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summaryAmount {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.summaryDivider {
+  border-top: 1px solid var(--border-color);
+  margin: 0.5rem 0;
+}
+
+.totalRow {
+  font-weight: 700;
+}
+
+.summaryTotal {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.submitSection {
+  padding-top: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: 2.75rem;
+}
+
+.submitButton:hover {
+  background-color: var(--primary-hover);
+}

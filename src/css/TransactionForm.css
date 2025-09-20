@@ -1,0 +1,225 @@
+/* pages/Transactions.css */
+.transactionsPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.transactionsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transactionsTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.exportButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--bg);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.exportButton:hover {
+  background-color: var(--accent-bg);
+}
+
+.filtersCard, .transactionsCard {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.transactionsCard .cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cardContent {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.filtersGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .filtersGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  color: var(--muted-fg);
+}
+
+.searchInput {
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 2.5rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--bg);
+  border-radius: 0.375rem;
+}
+
+.filterSelect {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--bg);
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.transactionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transactionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.transactionItem:hover {
+  background-color: rgba(var(--accent-bg-rgb), 0.5);
+}
+
+.transactionInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transactionIcon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transactionIcon.destructive {
+  background-color: rgba(var(--destructive-bg-rgb), 0.1);
+}
+
+.transactionIcon.destructive i {
+  color: var(--destructive-color);
+}
+
+.transactionIcon.success {
+  background-color: rgba(var(--success-bg-rgb), 0.1);
+}
+
+.transactionIcon.success i {
+  color: var(--success-color);
+}
+
+.transactionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.transactionType {
+  font-weight: 500;
+}
+
+.transactionMeta {
+  font-size: 0.875rem;
+  color: var(--muted-fg);
+}
+
+.transactionReference {
+  font-size: 0.75rem;
+  color: var(--muted-fg);
+}
+
+.transactionAmountContainer {
+  text-align: right;
+}
+
+.transactionAmount {
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.transactionAmount.success {
+  color: var(--success-color);
+}
+
+.transactionStatusContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge.success {
+  background: var(--success);
+  color: white;
+}
+
+.status-badge.warning {
+  background: var(--warning);
+  color: white;
+}
+
+.status-badge.destructive {
+  background: var(--destructive);
+  color: white;
+}
+
+.transactionDate {
+  font-size: 0.75rem;
+  color: var(--muted-fg);
+  margin-top: 0.25rem;
+}
