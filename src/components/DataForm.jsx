@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faWifi } from "@fortawesome/free-solid-svg-icons";
 import '../css/DataForm.css'
 
 const DataForm = () => {
@@ -13,10 +13,13 @@ const DataForm = () => {
     { plan: "20GB - 30 Days", price: "₦15,000" },
   ];
   return (
-    <div>
-        <div className="card">
-          <div className="card-header">
-            <h3 className="card-title">Data Purchase</h3>
+    <div className="data-form-wrapper">
+        <div className="data-card">
+          <div className="data-card-header">
+            <div className="header-info">
+                <FontAwesomeIcon icon={faWifi} className="title-icon" />
+                <h3 className="card-title">Data Purchase</h3>
+            </div>
           </div>
 
           <div className="card-content">
@@ -40,7 +43,7 @@ const DataForm = () => {
 
             <div className="form-group">
               <label>Select Data Plan</label>
-              <div className="plans">
+              <div className="plans-grid">
                 {plans.map((item, idx) => (
                   <div key={idx} className="plan-card">
                     <p className="plan-text">{item.plan}</p>
@@ -51,7 +54,7 @@ const DataForm = () => {
             </div>
 
             <div className="btn-wrapper">
-              <button className="btn-primary">Purchase Data</button>
+              <button className="btn-primary">Purchase Data Now</button>
             </div>
           </div>
         </div>
@@ -59,4 +62,4 @@ const DataForm = () => {
   )
 }
 
-export default DataForm
+export default DataForm;
