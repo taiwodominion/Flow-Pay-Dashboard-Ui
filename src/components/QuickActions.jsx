@@ -15,7 +15,10 @@ import '../css/QuickActions.css'
 const QuickActions = () => {
   return (
     <div className="quick-actions">
-      <h2>Quick Actions</h2>
+      <div className="quick-actions-header">
+        <h2>Quick Actions</h2>
+        <p>Select a service to get started</p>
+      </div>
       <div className="actions-grid">
         <a href="/airtime" className="action-card blue">
           <div className="action-icon">

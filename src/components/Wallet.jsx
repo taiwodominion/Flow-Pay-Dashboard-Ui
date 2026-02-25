@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash, faPlus, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash, faPlus, faArrowUpRightFromSquare, faWallet } from '@fortawesome/free-solid-svg-icons';
 import '../css/Wallet.css'
 
 const Wallet = () => {
@@ -9,33 +9,41 @@ const Wallet = () => {
 
   return (
     <div className="wallet-card">
-      <div className="wallet-header">
-        <div>
-          <p className="wallet-title">Wallet Balance</p>
-          <div className="wallet-balance-container">
-            <p className="wallet-balance">
-              ₦{balanceVisible ? balance.toLocaleString() : '•••••'}
-            </p>
+      <div className="wallet-main-content">
+        <div className="wallet-info">
+          <div className="wallet-label">
+            <FontAwesomeIcon icon={faWallet} className="wallet-icon-mini" />
+            <span>Total Available Balance</span>
+          </div>
+          <div className="wallet-balance-row">
+            <h2 className="wallet-balance">
+              ₦{balanceVisible ? balance.toLocaleString() : '••••••'}
+            </h2>
             <button
-              className="wallet-toggle"
+              className="balance-visibility-toggle"
               onClick={() => setBalanceVisible(!balanceVisible)}
             >
               <FontAwesomeIcon icon={balanceVisible ? faEyeSlash : faEye} />
             </button>
           </div>
+          <div className="wallet-badge">
+            <span className="dot"></span>
+            Active Wallet
+          </div>
         </div>
-      </div>
-      <div className="wallet-actions">
-        <a href="/fund-wallet">
-          <button>
-            <FontAwesomeIcon icon={faPlus} />
-            Fund Wallet
+
+        <div className="wallet-actions-grid">
+          <a href="/fund-wallet" className="action-link">
+            <button className="btn-primary-white">
+              <FontAwesomeIcon icon={faPlus} />
+              <span>Add Money</span>
+            </button>
+          </a>
+          <button className="btn-secondary-glass">
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            <span>Withdraw</span>
           </button>
-        </a>
-        <button>
-          <FontAwesomeIcon icon={faArrowRight} />
-          Withdraw
-        </button>
+        </div>
       </div>
     </div>
   );
