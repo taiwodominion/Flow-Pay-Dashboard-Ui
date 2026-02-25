@@ -11,8 +11,8 @@ import {
   faDollarSign,
   faHistory,
   faWallet,
-  faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
+import displayPic from "../assets/my_animated_pic.jpg";
 import '../css/Sidebar.css';
 
 const Sidebar = () => {
@@ -36,18 +36,28 @@ const Sidebar = () => {
 
   return (
     <aside>
-      <button className="sidebar-toggle" onClick={toggleSidebar}>
-        <FontAwesomeIcon icon={faChevronLeft} className="nav-icon" />
+      <button 
+        className={`sidebar-toggle ${mobileMenu ? 'open' : ''}`} 
+        onClick={toggleSidebar}
+        aria-label="Toggle Menu"
+      >
+        <div className="hamburger-box">
+          <div className="hamburger-inner"></div>
+        </div>
       </button>
+
+      {mobileMenu && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
 
       <div className={`sidebar ${mobileMenu ? 'sidebar-active' : ''}`}>
         <div className="sidebar-header">
-          <div className="logo">
-            <h1>Flow-Pay</h1>
+          <div className="logo-container">
+            <div className="logo-icon">F</div>
+            <h1 className="logo-text">Flow<span>Pay</span></h1>
           </div>
         </div>
 
         <nav className="sidebar-nav">
+          <p className="nav-section-label">Main Menu</p>
           {navItems.map(({ label, to, icon }) => (
             <NavLink
               key={to}
@@ -55,12 +65,23 @@ const Sidebar = () => {
               className={({ isActive }) =>
                 `nav-item ${isActive ? 'active' : ''}`
               }
+              onClick={() => setMobileMenu(false)}
             >
-              <FontAwesomeIcon icon={icon} className="nav-icon" />
+              <div className="icon-wrapper">
+                <FontAwesomeIcon icon={icon} className="nav-icon" />
+              </div>
               <span className="nav-label">{label}</span>
             </NavLink>
           ))}
         </nav>
+
+        <div className="sidebar-footer">
+           <div className="user-avatar">DT</div>
+           <div className="user-info">
+              <p className="user-name">Taiwo Dominion</p>
+              <p className="user-status">Verified Account</p>
+           </div>
+        </div>
       </div>
     </aside>
   );
