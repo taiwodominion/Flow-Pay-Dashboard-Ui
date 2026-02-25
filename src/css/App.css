@@ -27,7 +27,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 } 
 
 .main-content {
@@ -44,7 +44,6 @@ body::-webkit-scrollbar {
   margin: 0 auto;
 }
 
-/* Update any generic card to follow the new theme */
 .card, .action-card {
   background: var(--card-bg) !important;
   border: 1px solid var(--border-color) !important;
@@ -54,5 +53,14 @@ body::-webkit-scrollbar {
 @media (max-width: 900px) {
   .main-content {
     margin-left: 0;
+  }
+
+  .dashboard-layout {
+    margin: 0;
+  }
+
+  .dashboard-main {
+    padding: 1rem 0.5rem;
+    margin: 0;
   }
 }

@@ -159,4 +159,8 @@
   .wallet-balance {
     font-size: 1.8rem;
   }
+
+  .wallet-card button {
+    padding: 8px 5px; 
+  }
 }
