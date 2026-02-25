@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faTv } from '@fortawesome/free-solid-svg-icons';
 import '../css/TvForm.css';
 
 const TvForm = () => {
@@ -23,10 +23,12 @@ const TvForm = () => {
   return (
     <main className="tv-sub-main">
       <div className="tv-sub-container">
-        
         <div className="tv-sub-card">
           <div className="card-header">
-            <h3 className="card-title">TV Subscription</h3>
+            <div className="header-flex">
+                <FontAwesomeIcon icon={faTv} className="header-icon" />
+                <h3 className="card-title">TV Subscription</h3>
+            </div>
           </div>
           
           <div className="card-content">

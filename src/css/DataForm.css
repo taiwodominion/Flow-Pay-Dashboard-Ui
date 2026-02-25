@@ -33,7 +33,7 @@
   color: var(--text-primary);
 }
 
-.card-content {
+.data-form-wrapper .card-content {
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -153,8 +153,8 @@
     background: transparent;
   }
   
-  .data-card-header, .card-content {
-    padding: 1.25rem 0;
+  .data-card-header, .data-form-wrapper .card-content {
+    padding: 0.5rem 0;
   }
 
   .plan-card {

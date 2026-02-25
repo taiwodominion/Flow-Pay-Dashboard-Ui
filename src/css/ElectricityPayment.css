@@ -45,7 +45,7 @@
   font-weight: 600;
 }
 
-.card-content {
+.electricity-container .card-content {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -172,5 +172,9 @@
   
   .electricity-container {
     padding: 0 1rem;
+  }
+
+  .electricity-container .card-content {
+    padding: 0.5rem 0;
   }
 }

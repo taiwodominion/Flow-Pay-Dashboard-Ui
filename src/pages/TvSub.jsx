@@ -1,8 +1,7 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar'
-import Header from '../components/Header'
-import TvHead from '../components/TvHead'
-import TvForm from '../components/TvForm'
+import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
+import TvForm from '../components/TvForm';
 
 const TvSub = () => {
   return (
@@ -11,7 +10,6 @@ const TvSub = () => {
       <div className="main-content">
         <Header />
         <main className="dashboard-main">
-          <TvHead />
           <TvForm />
         </main>
       </div>

@@ -45,7 +45,7 @@
   font-weight: 600;
 }
 
-.card-content {
+.flight-container .card-content {
   padding: 1.5rem;
   padding-top: 0;
 }
