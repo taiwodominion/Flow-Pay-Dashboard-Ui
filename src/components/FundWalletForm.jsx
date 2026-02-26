@@ -1,4 +1,12 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faWallet, 
+  faBuilding, 
+  faCreditCard, 
+  faMobileAlt, 
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import '../css/FundWalletForm.css';
 
 const FundWalletForm = () => {
@@ -8,9 +16,9 @@ const FundWalletForm = () => {
 
   const quickAmounts = [1000, 2000, 5000, 10000, 20000, 50000];
   const paymentMethods = [
-    { id: 'bank', name: 'Bank Transfer', icon: 'fa-building', description: 'Transfer to our account', fee: 'Free' },
-    { id: 'card', name: 'Debit/Credit Card', icon: 'fa-credit-card', description: 'Pay with your card', fee: '1.5% fee' },
-    { id: 'ussd', name: 'USSD', icon: 'fa-mobile', description: 'Dial *737*', fee: 'Free' }
+    { id: 'bank', name: 'Bank Transfer', icon: faBuilding, description: 'Transfer to our account', fee: 'Free' },
+    { id: 'card', name: 'Debit/Credit Card', icon: faCreditCard, description: 'Pay with your card', fee: '1.5% fee' },
+    { id: 'ussd', name: 'USSD', icon: faMobileAlt, description: 'Dial *737*', fee: 'Free' }
   ];
 
   const calculateFee = () => {
@@ -30,10 +38,10 @@ const FundWalletForm = () => {
     <div className="fundWalletPage">
       <div className="fundWalletHeader">
         <h1 className="fundWalletTitle">
-          <i className="fas fa-wallet"></i>
+          <FontAwesomeIcon icon={faWallet} className="headerWalletIcon" />
           Fund Wallet
         </h1>
-        <p className="fundWalletDescription">Add money to your wallet balance</p>
+        <p className="fundWalletDescription">Securely add money to your wallet balance</p>
       </div>
       
       <div className="fundWalletCard">
@@ -62,18 +70,21 @@ const FundWalletForm = () => {
 
             <div className="formSection">
               <label className="formLabel" htmlFor="amount">Custom Amount</label>
-              <input
-                type="number"
-                id="amount"
-                className="amountInput"
-                placeholder="Enter amount (Min: ₦100)"
-                value={customAmount}
-                onChange={(e) => {
-                  setCustomAmount(e.target.value);
-                  setSelectedAmount(null);
-                }}
-                min="100"
-              />
+              <div className="inputWithCurrency">
+                <span className="currencyPrefix">₦</span>
+                <input
+                  type="number"
+                  id="amount"
+                  className="amountInput"
+                  placeholder="Enter amount (Min: ₦100)"
+                  value={customAmount}
+                  onChange={(e) => {
+                    setCustomAmount(e.target.value);
+                    setSelectedAmount(null);
+                  }}
+                  min="100"
+                />
+              </div>
             </div>
 
             <div className="formSection">
@@ -87,7 +98,7 @@ const FundWalletForm = () => {
                   >
                     <div className="paymentMethodContent">
                       <div className="paymentMethodIcon">
-                        <i className={`fas ${method.icon}`}></i>
+                        <FontAwesomeIcon icon={method.icon} />
                       </div>
                       <div className="paymentMethodInfo">
                         <p className="paymentMethodName">{method.name}</p>
@@ -104,16 +115,16 @@ const FundWalletForm = () => {
 
             <div className="paymentSummary">
               <div className="summaryRow">
-                <span>Amount:</span>
+                <span>Top-up Amount:</span>
                 <span className="summaryAmount">₦{(selectedAmount || parseFloat(customAmount) || 0).toLocaleString()}</span>
               </div>
               <div className="summaryRow">
-                <span>Fee:</span>
+                <span>Transaction Fee:</span>
                 <span className="summaryAmount">₦{calculateFee().toLocaleString()}</span>
               </div>
               <div className="summaryDivider"></div>
               <div className="summaryRow totalRow">
-                <span>Total:</span>
+                <span>Total to Pay:</span>
                 <span className="summaryTotal">₦{totalAmount().toLocaleString()}</span>
               </div>
             </div>
@@ -121,6 +132,7 @@ const FundWalletForm = () => {
             <div className="submitSection">
               <button className="submitButton">
                 Proceed to Payment
+                <FontAwesomeIcon icon={faChevronRight} className="submitIcon" />
               </button>
             </div>
           </div>

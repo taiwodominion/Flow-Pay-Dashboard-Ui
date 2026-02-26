@@ -11,6 +11,7 @@ import {
   faDollarSign,
   faHistory,
   faWallet,
+  faTools,
 } from '@fortawesome/free-solid-svg-icons';
 import displayPic from "../assets/my_animated_pic.jpg";
 import '../css/Sidebar.css';
@@ -32,6 +33,7 @@ const Sidebar = () => {
     { label: 'Betting', to: '/betting', icon: faDollarSign },
     { label: 'Transactions', to: '/transactions', icon: faHistory },
     { label: 'Fund Wallet', to: '/fund-wallet', icon: faWallet },
+    { label: 'Settings', to: '/settings', icon: faTools },
   ];
 
   return (
@@ -76,7 +78,7 @@ const Sidebar = () => {
         </nav>
 
         <div className="sidebar-footer">
-           <div className="user-avatar">DT</div>
+           <div className="user-avatar">TD</div>
            <div className="user-info">
               <p className="user-name">Taiwo Dominion</p>
               <p className="user-status">Verified Account</p>

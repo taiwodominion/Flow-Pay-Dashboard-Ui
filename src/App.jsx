@@ -9,6 +9,8 @@ import Flight from './pages/Flight';
 import Betting from './pages/Betting';
 import Transactions from './pages/Transactions';
 import FundWallet from './pages/FundWallet';
+import Settings from './pages/Settings';
+import Help from './pages/Help';
 import './css/App.css';
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         <Route path='/betting' element={<Betting />} />
         <Route path='/transactions' element={<Transactions />} />
         <Route path='/fund-wallet' element={<FundWallet />} />
+        <Route path='/settings' element={<Settings />} />
+        <Route path='/help' element={<Help />} />
       </Routes>
     </div>
   );

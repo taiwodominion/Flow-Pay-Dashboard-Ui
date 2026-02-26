@@ -65,11 +65,11 @@ const Header = () => {
                 <div className="dropdown-header">
                    <p>Account Settings</p>
                 </div>
-                <Link to="/profile"><FontAwesomeIcon icon={faUser} /> Profile</Link>
+                <Link to="/settings"><FontAwesomeIcon icon={faUser} /> Profile</Link>
                 <Link to="/settings"><FontAwesomeIcon icon={faCog} /> Settings</Link>
                 <Link to="/help"><FontAwesomeIcon icon={faQuestionCircle} /> Help Center</Link>
                 <hr />
-                <Link to="/logout" className="logout-link"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</Link>
+                <Link to="/" className="logout-link"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</Link>
               </div>
             )}
           </div>

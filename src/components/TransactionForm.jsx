@@ -1,4 +1,14 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  // faArrowUpRightFromSquare, 
+  // faArrowDownLeftAndPostit, // Alternative for inward arrow
+  faArrowTrendUp,
+  faArrowTrendDown,
+  faDownload,
+  faSearch,
+  faFilter
+} from '@fortawesome/free-solid-svg-icons';
 import '../css/TransactionForm.css';
 
 const TransactionForm = () => {
@@ -11,7 +21,7 @@ const TransactionForm = () => {
       status: 'completed',
       statusClass: 'success',
       date: '2024-01-15 14:30',
-      icon: 'fa-arrow-up-right',
+      icon: faArrowTrendUp,
       iconColor: 'destructive'
     },
     {
@@ -22,7 +32,7 @@ const TransactionForm = () => {
       status: 'completed',
       statusClass: 'success',
       date: '2024-01-14 09:15',
-      icon: 'fa-arrow-down-right',
+      icon: faArrowTrendDown,
       iconColor: 'success'
     },
     {
@@ -33,7 +43,7 @@ const TransactionForm = () => {
       status: 'pending',
       statusClass: 'pending',
       date: '2024-01-13 16:45',
-      icon: 'fa-arrow-up-right',
+      icon: faArrowTrendUp,
       iconColor: 'destructive'
     },
     {
@@ -44,7 +54,7 @@ const TransactionForm = () => {
       status: 'completed',
       statusClass: 'success',
       date: '2024-01-12 11:20',
-      icon: 'fa-arrow-up-right',
+      icon: faArrowTrendUp,
       iconColor: 'destructive'
     },
     {
@@ -55,7 +65,7 @@ const TransactionForm = () => {
       status: 'failed',
       statusClass: 'failed',
       date: '2024-01-11 13:10',
-      icon: 'fa-arrow-up-right',
+      icon: faArrowTrendUp,
       iconColor: 'destructive'
     },
     {
@@ -66,7 +76,7 @@ const TransactionForm = () => {
       status: 'completed',
       statusClass: 'success',
       date: '2024-01-10 08:00',
-      icon: 'fa-arrow-up-right',
+      icon: faArrowTrendUp,
       iconColor: 'destructive'
     },
     {
@@ -77,7 +87,7 @@ const TransactionForm = () => {
       status: 'pending',
       statusClass: 'pending',
       date: '2024-01-09 19:30',
-      icon: 'fa-arrow-up-right',
+      icon: faArrowTrendUp,
       iconColor: 'destructive'
     }
   ];
@@ -87,7 +97,7 @@ const TransactionForm = () => {
       <div className="transactionsHeader">
         <h1 className="transactionsTitle">Transaction History</h1>
         <button className="exportButton">
-          <i className="fas fa-download"></i>
+          <FontAwesomeIcon icon={faDownload} />
           Export
         </button>
       </div>
@@ -99,7 +109,7 @@ const TransactionForm = () => {
         <div className="cardContent">
           <div className="filtersGrid">
             <div className="searchContainer">
-              <i className="fas fa-search searchIcon"></i>
+              <FontAwesomeIcon icon={faSearch} className="searchIcon" />
               <input 
                 type="text" 
                 placeholder="Search transactions..." 
@@ -108,12 +118,20 @@ const TransactionForm = () => {
             </div>
             <select className="filterSelect">
               <option value="">Transaction Type</option>
+              <option value="airtime">Airtime</option>
+              <option value="data">Data</option>
+              <option value="funding">Wallet Funding</option>
             </select>
             <select className="filterSelect">
               <option value="">Status</option>
+              <option value="completed">Completed</option>
+              <option value="pending">Pending</option>
+              <option value="failed">Failed</option>
             </select>
             <select className="filterSelect">
               <option value="">Date Range</option>
+              <option value="7">Last 7 Days</option>
+              <option value="30">Last 30 Days</option>
             </select>
           </div>
         </div>
@@ -129,7 +147,7 @@ const TransactionForm = () => {
               <div key={index} className="transactionItem">
                 <div className="transactionInfo">
                   <div className={`transactionIcon ${transaction.iconColor}`}>
-                    <i className={`fas ${transaction.icon}`}></i>
+                    <FontAwesomeIcon icon={transaction.icon} />
                   </div>
                   <div className="transactionDetails">
                     <p className="transactionType">{transaction.type}</p>

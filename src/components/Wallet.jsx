@@ -5,7 +5,7 @@ import '../css/Wallet.css'
 
 const Wallet = () => {
   const [balanceVisible, setBalanceVisible] = useState(true);
-  const balance = 250000;
+  const balance = 2500000;
 
   return (
     <div className="wallet-card">
