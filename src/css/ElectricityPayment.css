@@ -1,180 +1,227 @@
 .electricity-container {
-  max-width: 42rem;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.electricity-header {
+.electricity-header-info {
   text-align: center;
-}
-
-.electricity-header h1 {
-  font-size: 1.875rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.electricity-header h1 i {
-  color: #3b82f6;
+.electricity-header-info h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
 }
 
-.electricity-header p {
-  color: #6b7280;
+.bolt-icon {
+  color: #fbbf24;
 }
 
-.card {
-  border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+.electricity-header-info p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.electricity-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.card-header h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .electricity-container .card-content {
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .form-group label {
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .select-wrapper {
   position: relative;
 }
 
-.select-wrapper select {
+.select-wrapper select, .meter-input, .customer-input, .amount-input {
   width: 100%;
-  height: 2.5rem;
-  padding: 0 2.5rem 0 0.75rem;
-  border-radius: 0.375rem;
-  border: 1px solid #d1d5db;
+  height: 52px;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
   appearance: none;
-  background-color: #fff;
-  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.select-wrapper i {
+.select-arrow {
   position: absolute;
-  right: 0.75rem;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+  color: var(--text-muted);
   pointer-events: none;
-  color: #6b7280;
+  font-size: 0.8rem;
 }
 
-.meter-input, .customer-input, .amount-input {
-  width: 100%;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  border-radius: 0.375rem;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
+.input-with-action {
+  display: flex;
+  gap: 10px;
+}
+
+.verify-inline-btn {
+  padding: 0 20px;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.verify-inline-btn:hover {
+  background: var(--primary-color);
+  color: white;
 }
 
 .customer-input {
-  background-color: #f9fafb;
-  color: #6b7280;
+  background: rgba(16, 185, 129, 0.05) !important;
+  border-color: rgba(16, 185, 129, 0.2) !important;
+  color: #10b981 !important;
+  font-weight: 600;
 }
 
-.quick-amounts {
+.verified-group label {
+  color: #10b981;
+}
+
+.quick-amounts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .amount-btn {
-  padding: 0.5rem;
-  border-radius: 0.375rem;
-  border: 1px solid #d1d5db;
-  background-color: #fff;
-  font-size: 0.875rem;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .amount-btn:hover {
-  background-color: #f9fafb;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary-color);
 }
 
 .amount-btn.selected {
-  background-color: #3b82f6;
+  background: var(--primary-color);
   color: white;
-  border-color: #3b82f6;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
 .action-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
   padding-top: 1rem;
-}
-
-.verify-btn {
-  width: 100%;
-  height: 2.5rem;
-  border-radius: 0.375rem;
-  border: 1px solid #d1d5db;
-  background-color: #fff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.verify-btn:hover {
-  background-color: #f9fafb;
 }
 
 .pay-btn {
   width: 100%;
-  height: 2.75rem;
-  border-radius: 0.375rem;
-  background-color: #3b82f6;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--primary-color);
   color: white;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
 }
 
 .pay-btn:hover {
-  background-color: #2563eb;
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
 }
 
-@media (max-width: 768px) {
-  .quick-amounts {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 480px) {
+  .electricity-card {
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
   }
   
-  .electricity-container {
-    padding: 0 1rem;
+  .card-header, .electricity-container .card-content {
+    padding: 1.25rem 0;
   }
 
-  .electricity-container .card-content {
-    padding: 0.5rem 0;
+  .quick-amounts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .input-with-action {
+    flex-direction: column;
+  }
+  
+  .verify-inline-btn {
+    height: 48px;
+  }
+  
+  .electricity-header-info h1 {
+    font-size: 1.25rem;
   }
 }
